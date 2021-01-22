@@ -7,11 +7,16 @@ module.exports = {
     },
 
     async add(request, response) {
-        const { number, value, status, customer_name, date } = request.body
+        const { number, sale_price, purchase_price, container_type, container_location, stack, height, status, customer_name, date } = request.body
 
         database.insert({
             number, 
-            value, 
+            sale_price,
+            purchase_price,
+            container_type,
+            container_location,
+            stack,
+            height,
             status, 
             customer_name,
             date,
